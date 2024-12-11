@@ -9,45 +9,30 @@ from plugins.config import *
 
 
 
-# Prepare bot client
 bot = Client(
-    "botclient",
-    bot_token=BOT_TOKEN,
-    api_id=API_ID,
-    api_hash=API_HASH,
-    sleep_threshold=30
+    "url_uploader_bot",
+    api_id=Config.API_ID,
+    api_hash=Config.API_HASH,
+    bot_token=Config.BOT_TOKEN,
+    sleep_threshold=250,
 )
 
-# Prepare user client if session string is provided
-if SESSION_STRING:
-    user_client = Client(
-        "UserClient",
-        session_string=SESSION_STRING,
-        api_id=API_ID,
-        api_hash=API_HASH,
-        sleep_threshold=30,
-        no_updates=True
-    )
-else:
-    user_client = None
+premium_client = Client(
+    "premium_client",
+    api_id=Config.API_ID,
+    api_hash=Config.API_HASH,
+    session_string=Config.PREMIUM_SESSION_STRING,
+    sleep_threshold=250,
+)
 
-# Start the clients
+
+
+# Start the bot
 if __name__ == "__main__":
-    # Create download directory if it does not exist
-    if not os.path.isdir(DOWN_DIR):
-        os.makedirs(DOWN_DIR)
-        
-    # Start bot client
     bot.start()
-    
-    # Start user client if available
-    if user_client:
-        user_client.start()
-    
-    # Keep the main thread running
+    if premium_client:
+        premium_client.start()
     idle()
-    
-    # Stop the clients
     bot.stop()
-    if user_client:
-        user_client.stop()
+    if premium_client:
+        premium_client.stop()
