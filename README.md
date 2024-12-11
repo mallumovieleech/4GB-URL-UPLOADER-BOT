@@ -8,7 +8,7 @@
 
 ###### BOT LINK -> [UPLOADER 4GB BOT](https://t.me/LinkToFileUploaderBot)
 
-###### 2 BOT LINK -> [TORRENT UPLOADER BOT](https://t.me/Torrent_Uploader_Bot)
+###### 2 BOT LINK -> [TORRENT UPLOADER BOT](https://t.me/LinkToFileUploaderBot)
 
 ### Bot Commands 
 ```
