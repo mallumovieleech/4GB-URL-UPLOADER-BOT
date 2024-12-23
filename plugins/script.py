@@ -4,7 +4,7 @@ class Translation(object):
 
   START_TEXT = """ Hello bro donete me tg premium to start
 
-Contact me @LISA_FAN_LK
+Contact me @ZKP143
 """
   HELP_TEXT = """ donete tg premium 👌🏻
 
