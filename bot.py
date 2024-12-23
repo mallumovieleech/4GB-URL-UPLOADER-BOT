@@ -21,7 +21,7 @@ premium_client = Client(
     "premium_client",
     api_id=Config.API_ID,
     api_hash=Config.API_HASH,
-    session_string=Config.PREMIUM_SESSION_STRING,
+    session_string=Config.SESSION_STRING,
     sleep_threshold=250,
 )
 
